@@ -2,17 +2,17 @@ import React from "react";
 
 const TodoForm =(props) => {
     return(
-        <from onSubmit ={props.addTodo}>
+        <form onSubmit ={props.addTodo}>
         <input
             value={props.todo}
             type="text"
             name="todo"
-            placeholder = "Todo"
+            placeholder = "...todo"
             onChange ={props.handleChanges}
             />
             <button>Add Todo</button>
             <button>Clear Compleated</button>
-        </from>
+        </form>
     );
 }
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import TodoList from "./components.TodoComponents/TodoList";
-import  Todoform from "./components/TodoComponents/TodoForm";
+import TodoList from "./components/TodoComponents/TodoList";
+import  TodoForm from "./components/TodoComponents/TodoForm";
 
-const todoData = [
+const data = [
   {
     task: 'Organize Garage',
     id: 1528817077286,
@@ -19,21 +19,21 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: todoData,
-      todo: "",
+      data: data,
+      todo: ""
     };
   }
 
   handleChanges = ev => {
-    this.setState({[event.target.value]});
-  };
+    this.setState({ todo: ev.target.value})
+  }
 
   addTodo = ev => {
     ev.preventDefault();
     this.setState({
       data:[
         ...this.state.data,
-        {task: this.state.todo, id: math.floor(Math.ramdom()*1000000), compleated:false}
+        {task: this.state.todo, id: Math.floor(Math.random() * 1000000), completed: false}
       ],
       todo: ""
     });
@@ -45,8 +45,8 @@ class App extends React.Component {
     return (
       <div>
         <h2>To Do List!</h2>
-        <TodoList data ={this.state.todoData} />
-        <Todoform
+        <TodoList data ={this.state.data} />
+        <TodoForm
           todo={this.state.todo}
           handleChanges={this.handleChanges}
           addTodo={this.addTodo}
