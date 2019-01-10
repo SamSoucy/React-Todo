@@ -5,18 +5,23 @@
 import React from "react";
 import Todo from "./Todo";
 
-const TodoList = (props)=>{
+const TodoList = props =>{
     return (
         <div>
-            {
-                props.data.map((e)=>{
+            {props.data.map((task, index)=>{
                     return(
-                        <Todo task={e.task}/>
-                    )
-                })
-            }
+                        <Todo 
+                        task={task}
+                        index={index}
+                        toggleData ={props.toggleData}
+                        key = {task.id}
+                        />);
+                    
+                    
+                })}
+            
         </div>
-    )
+    );
 }
 
 export default TodoList;
