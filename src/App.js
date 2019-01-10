@@ -33,7 +33,7 @@ class App extends React.Component {
     this.setState({
       data:[
         ...this.state.data,
-        {task: this.state.todo, id: Math.floor(Math.random() * 1000000), completed: false}
+        {task: this.state.todo, id: Date.now(), completed: false}
       ],
       todo: ""
     });
