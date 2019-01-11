@@ -1,3 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    stroke-linecap: butt;
+    
+}
+
 .completed{
     text-decoration: line-through;
+    color: red;
 }
+
+.title{
+    Font-size: 75px;
+}
+
+.subBut{
+    color: blue;
+    border-radius: 5%;
+    
+
+}
+
+.clearBut{
+    color: Red;
+    border-radius: 5%;
+    margin-bottom: 15%;
+    
+    
+}
+
+.list{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+

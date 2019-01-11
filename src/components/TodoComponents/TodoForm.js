@@ -11,8 +11,8 @@ const TodoForm= props =>{
             placeholder = "...todo"
             onChange ={props.handleChanges}
             />
-            <button type="submit">Add Todo</button>
-            <button onClick={props.clear}>Clear Compleated</button>
+            <button className="subBut" type="submit">Add Todo</button>
+            <button className="clearBut" onClick={props.clear}>Clear Compleated</button>
         </form>
     );
 }

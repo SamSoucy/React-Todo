@@ -4,11 +4,13 @@ import  TodoForm from "./components/TodoComponents/TodoForm";
 // import "./components/TodoComponents/Todo.css";
 
 const data = [
-  {
+  { 
     task: 'Organize Garage',
     id: 1528817077286,
     completed: false
+    
   },
+  
   {
     task: 'Bake Cookies',
     id: 1528817084358,
@@ -70,7 +72,7 @@ clear = ev =>{
   render() {
     return (
       <div className="App">
-        <h2>To Do List!</h2>
+        <h2 className="title">To Do List!</h2>
         <TodoList 
         toggleData={this.toggleData}
         data ={this.state.data} />
